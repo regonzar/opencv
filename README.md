@@ -1,5 +1,12 @@
 ### OpenCV: Open Source Computer Vision Library
 
+Modified version working on Jetson TX2 and jetpack 3.1
+
+-enable udp buffer for rtsp
+-fix gstreamer videoconvert bug
+
+
+
 #### Resources
 
 * Homepage: <http://opencv.org>
