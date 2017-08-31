@@ -82,7 +82,8 @@
 #define COLOR_ELEM "videoconvert"
 #define COLOR_ELEM_NAME COLOR_ELEM
 #else
-#define COLOR_ELEM "autovideoconvert"
+//#define COLOR_ELEM "autovideoconvert"
+#define COLOR_ELEM "videoconvert"
 #define COLOR_ELEM_NAME COLOR_ELEM
 #endif
 

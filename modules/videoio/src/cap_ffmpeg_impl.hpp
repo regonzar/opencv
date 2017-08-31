@@ -2573,7 +2573,11 @@ bool InputMediaStream_FFMPEG::open(const char* fileName, int* codec, int* chroma
     #endif
 
     #if LIBAVFORMAT_BUILD >= CALC_FFMPEG_VERSION(53, 6, 0)
-        err = avformat_open_input(&ctx_, fileName, 0, 0);
+        //err = avformat_open_input(&ctx_, fileName, 0, 0);
+        AVDictionary *d=NULL;
+        av_dict_set(&d,"rtsp_transport","udp",0);
+        av_dict_set(&d,"buffer_size","524288",0);
+        err = avformat_open_input(&ctx_, fileName, 0, &d);
     #else
         err = av_open_input_file(&ctx_, fileName, 0, 0, 0);
     #endif
